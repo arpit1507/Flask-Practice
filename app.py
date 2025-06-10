@@ -27,11 +27,11 @@ def form():
         return render_template('form.html', message=retrunmessage)
 
 @app.route('/api', methods=['POST'])
-def calculate_sum()
+def calculate_sum():
     data= request.get_json()
     a_val=float(dict(data)['a'])
     b_val=float(dict(data)['b'])
-    return jasonify({'sum': a_val + b_val})
+    return jsonify({'sum': a_val + b_val})
 
 
 if __name__ == '__main__':
